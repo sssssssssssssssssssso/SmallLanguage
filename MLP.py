@@ -36,7 +36,7 @@ for p in parameters:
 for _ in range(1000):
     ix = torch.randint(0, X.shape[0], (32,))
     emb = C[X[ix]]
-    h = torch.tanh(emb.view(-1, block_size * 2) @ W1 + b1)
+    h = torch.tanh(emb.view(-1, block_size * 2) @ W1+b1)
     logits = h @ W2 + b2
     loss = F.cross_entropy(logits, Y[ix])
     print(loss)
