@@ -36,7 +36,7 @@ for k in range(200):
     W.grad = None
     loss.backward()
     W.data += -50 * W.grad
-print('-------------------training finished!-------------------')
+print('------------------training finished!------------------')
 
 print('-------------------start predicting-------------------')
 g = torch.Generator().manual_seed(2147483647)
